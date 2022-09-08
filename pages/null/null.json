@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "输出电压",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

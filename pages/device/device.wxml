@@ -1,0 +1,15 @@
+<view class="box">
+    <image class="images" src="../../image/zhiyuan.png" mode="aspectFit" 	show-menu-by-longpress = '1'></image>
+    <view class="text">请输入控制端设备名称:</view>
+    <form action=""></form>
+    <view class="input_name_box">
+        <image class="shebei" src="../../image/shebei.png" background-size="cover" />
+        <input class="input_device_name" placeholder="设备名称" bindinput="input_device"/>
+    </view>
+    <view class="anniu">
+        <!-- <button bindtap="cancle" type="warn">取消</button> -->
+        <button bindtap="sure" type="primary">进入设备</button>
+    </view>
+    <button class="widget" plain="true" open-type='contact' session-from="weapp">遇到问题</button>
+</view>
+

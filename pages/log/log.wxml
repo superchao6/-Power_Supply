@@ -1,0 +1,33 @@
+
+<!-- 
+<view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class="get_user_info" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+</view> -->
+<image class="images" src="../../image/zhiyuan.png" mode="aspectFit" 	show-menu-by-longpress = '1'></image>
+<view>
+    <button style="width: 100%;" class="widget" open-type='contact' session-from="weapp">
+        <text class="widget__name">联系我们</text>
+        <image class="widget__arrow" src="../../image/arrow.png" background-size="cover" />
+        <view class="widget__line"></view>
+    </button>
+    <button style="width: 100%;" class="widget" open-type='share' session-from="weapp">
+        <text class="widget__name">分享好友</text>
+        <image class="widget__arrow" src="../../image/arrow.png" background-size="cover" />
+        <view class="widget__line"></view>
+    </button>
+    <button style="width: 100%;" class="widget" open-type="feedback" session-from="weapp">
+        <text class="widget__name">意见反馈</text>
+        <image class="widget__arrow" src="../../image/arrow.png" background-size="cover" />
+        <view class="widget__line"></view>
+    </button>
+    <button bindtap="change_device" style="width: 100%;" class="widget">
+        <text class="widget__name">更换设备</text>
+        <image class="widget__arrow" src="../../image/arrow.png" background-size="cover" />
+        <view class="widget__line"></view>
+    </button>
+
+</view>

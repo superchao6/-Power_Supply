@@ -1,0 +1,56 @@
+.images{
+    position: relative;
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    left: 5%;
+    height: 140px;  
+}
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center;
+    height:140px;
+}
+.get_user_info{
+    margin-top: 70rpx;
+}
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+.userinfo-nickname {
+    color: #aaa;
+}
+
+.widget{
+    height: 48px;
+    padding-top: 8px;
+    
+}
+.widget__name{
+    align-items:center;
+    font-size: larger;
+    font-weight:lighter;
+    position: absolute;
+    left: 8%;
+}
+.widget__arrow{
+    position: absolute;
+    top: 14px;
+    right: 10%;
+    width: 8px;
+    height: 16px;
+}
+.widget__line{
+    content: " ";
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    right: 20px;
+    height: 1rpx;
+    background-color: #DFDFDF;
+}

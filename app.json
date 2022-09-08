@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/device/device",
+        "pages/null/null",
+        "pages/channel/channel",
+        "pages/log/log"
+        
+    ],
+    "tabBar": {
+        "backgroundColor": "#1B82D1",
+        "selectedColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/null/null",
+                "text": "数据",
+                "iconPath": "image/shuju.png",
+                "selectedIconPath": "image/shuju_1.png"
+            },
+            {
+                "pagePath": "pages/channel/channel",
+                "text": "控制",
+                "iconPath": "image/jiekoupeizhi_1.png",
+                "selectedIconPath": "image/jiekoupeizhi.png"
+            },
+            {
+                "pagePath": "pages/log/log",
+                "text": "我的",
+                "iconPath": "image/wode.png",
+                "selectedIconPath": "image/wodedamaijihuo.png"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#1B82D1",
+        "navigationBarTitleText": "可控电源",
+        "navigationBarTextStyle": "white"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
+}

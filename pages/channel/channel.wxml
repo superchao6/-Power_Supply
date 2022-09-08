@@ -1,0 +1,67 @@
+<view class="container">
+	<!--选择通道按钮-->
+	<view class="choose_channel_box">
+		<view class="item {{current == '0' ? 'active' : ''}}" catchtap="choose_channel" data-id="0">通道1</view>
+
+		<view class="item {{current == '1' ? 'active' : ''}}" catchtap="choose_channel" data-id="1">通道2</view>
+	</view>
+
+	<!--通道开关拨动按钮-->
+	<view>
+		<view class="switch_channel" wx:if="{{0 == current}}">
+			<view class="switch_txt">通道1开关:</view>
+			<switch checked="{{switch_Checked_channel1}}" bindchange="switch_Change_channel1"/>
+		</view>
+		<view class="switch_channel" wx:elif="{{1 == current}}">
+			<view class="switch_txt">通道2开关:</view>
+			<switch checked="{{switch_Checked_channel2}}" bindchange="switch_Change_channel2"/>
+		</view>				
+	</view>
+
+	<!--当前参数数据-->
+	<view class="show">
+		<view class="shou_title">当前参数：</view>
+		<view class="show_line1">
+			<view class="show_name">限幅电压 (V)</view>
+			<view class="show_num" wx:if="{{current == 0}}">{{channel_1_volt_now}}</view>
+			<view class="show_num" wx:elif="{{current == 1}}">{{channel_2_volt_now}}</view>
+		</view>
+		<view class="show_line2">
+			<view class="show_name">限幅电流 (A)</view>
+			<view class="show_num" wx:if="{{current == 0}}">{{channel_1_cur_now}}</view>
+			<view class="show_num" wx:elif="{{current == 1}}">{{channel_2_cur_now}}</view>
+		</view>
+		<view class="show_line1">
+			<view class="show_name">当前电压 (V)</view>
+			<view class="show_num" wx:if="{{current == 0}}">{{channel_1_volt_out}}</view>
+			<view class="show_num" wx:elif="{{current == 1}}">{{channel_2_volt_out}}</view>
+		</view>
+		<view class="show_line2">
+			<view class="show_name">当前电流 (A)</view>
+			<view class="show_num" wx:if="{{current == 0}}">{{channel_1_cur_out}}</view>
+			<view class="show_num" wx:elif="{{current == 1}}">{{channel_2_cur_out}}</view>
+		</view>
+	</view>
+	
+	<!-- 输入部分 -->
+	<view class="input_box">
+		<view class="tips">*请先打开通道开关再输入参数</view>
+		<!--输入信息，输入框-->
+		<form wx:for="{{newslist}}" wx:for-index="idx" wx:key="id">
+			<view wx:if="{{idx == current}}">
+				<view class="box0">
+					<view class="box1">
+						<text class="title">请输入{{item.text}}的限幅电压:</text>
+						<input class="input_num" placeholder=" VOLT_DC" type="digit" bindinput="input_volt_num"/>
+					</view>
+					<view class="box1">
+						<text class="title">请输入{{item.text}}的限幅电流:</text>
+						<input class="input_num" placeholder=" CUR_DC" type="digit" bindinput="input_cur_num"/>
+					</view>
+					<button class="ok_button" form-type="reset" plain bindtap="enter">确定</button>
+				</view>
+			</view>
+		</form>
+	</view>
+
+</view>

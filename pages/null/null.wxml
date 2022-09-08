@@ -1,0 +1,11 @@
+<!-- <view class="box0" bindtap="click">
+  <image class="images" src="../../image/zhiyuan.png" mode="aspectFit" 	show-menu-by-longpress = '1'></image>
+</view> -->
+<view class="two_container">
+    <view class="container">
+    <ec-canvas style="width: 100%;height: 350px;" id="mychart_volt" canvas-id="mychart-line" ec="{{ ec_volt }}"></ec-canvas>
+    </view>
+    <view class="container">
+    <ec-canvas style="width: 100%;height: 350px;" id="mychart_cur" canvas-id="mychart-line" ec="{{ ec_cur }}"></ec-canvas>
+    </view>
+</view>
